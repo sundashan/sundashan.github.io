@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="1. 获取本地ip地址12345678910111213141516171819let os = require(&amp;apos;os&amp;apos;)const ifaces = os.networkInterfaces()console.log(ifaces)Object.keys(ifaces).forEach((ifname) =&amp;gt; &amp;#123;    // var alias = 0">
+  <meta name="description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一行命令自动更换ip并输出">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/一行命令自动更换ip并输出/index.html">
+<meta property="og:title" content="react-native零散记录">
+<meta property="og:url" content="http://yoursite.com/2019/09/11/react-native零散记录/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="1. 获取本地ip地址12345678910111213141516171819let os = require(&amp;apos;os&amp;apos;)const ifaces = os.networkInterfaces()console.log(ifaces)Object.keys(ifaces).forEach((ifname) =&amp;gt; &amp;#123;    // var alias = 0">
+<meta property="og:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-20T08:55:02.258Z">
+<meta property="og:updated_time" content="2019-09-11T03:58:07.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一行命令自动更换ip并输出">
-<meta name="twitter:description" content="1. 获取本地ip地址12345678910111213141516171819let os = require(&amp;apos;os&amp;apos;)const ifaces = os.networkInterfaces()console.log(ifaces)Object.keys(ifaces).forEach((ifname) =&amp;gt; &amp;#123;    // var alias = 0">
-  <link rel="canonical" href="http://yoursite.com/2019/05/23/一行命令自动更换ip并输出/">
+<meta name="twitter:title" content="react-native零散记录">
+<meta name="twitter:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
+  <link rel="canonical" href="http://yoursite.com/2019/09/11/react-native零散记录/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>一行命令自动更换ip并输出 | Blog</title>
+  <title>react-native零散记录 | Blog</title>
   
 
 
@@ -195,7 +195,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/一行命令自动更换ip并输出/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/react-native零散记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大山">
@@ -207,7 +207,7 @@
       <meta itemprop="name" content="Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">一行命令自动更换ip并输出
+        <h1 class="post-title" itemprop="name headline">react-native零散记录
 
           
         </h1>
@@ -223,19 +223,11 @@
                 
               
 
-              <time title="Created: 2019-05-23 22:46:07" itemprop="dateCreated datePublished" datetime="2019-05-23T22:46:07+08:00">2019-05-23</time>
+              <time title="Created: 2019-09-11 11:18:59 / Modified: 11:58:07" itemprop="dateCreated datePublished" datetime="2019-09-11T11:18:59+08:00">2019-09-11</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-20 16:55:02" itemprop="dateModified" datetime="2019-08-20T16:55:02+08:00">2019-08-20</time>
-              </span>
             
           
 
@@ -250,8 +242,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-获取本地ip地址"><a href="#1-获取本地ip地址" class="headerlink" title="1. 获取本地ip地址"></a>1. 获取本地ip地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">let os = require(&apos;os&apos;)</span><br><span class="line">const ifaces = os.networkInterfaces()</span><br><span class="line">console.log(ifaces)</span><br><span class="line"></span><br><span class="line">Object.keys(ifaces).forEach((ifname) =&gt; &#123;</span><br><span class="line">    // var alias = 0</span><br><span class="line">    ifaces[ifname].forEach(iface =&gt; &#123;</span><br><span class="line">        if (&apos;IPv4&apos; !== iface.family || iface.internal !== false) &#123;</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(ifname, iface.address)</span><br><span class="line">        // if (alias &gt;= 1) &#123;</span><br><span class="line">        //     console.log(ifname + &apos;:&apos; + alias, iface.address)</span><br><span class="line">        // &#125; else &#123;</span><br><span class="line">        //     console.log(ifname, iface.address)</span><br><span class="line">        // &#125;</span><br><span class="line">        // ++alias</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="2-修改config文件"><a href="#2-修改config文件" class="headerlink" title="2. 修改config文件"></a>2. 修改config文件</h3><h3 id="3-输出地址"><a href="#3-输出地址" class="headerlink" title="3. 输出地址"></a>3. 输出地址</h3>
+        <ol>
+<li>导航栏<br>react-navigation、react-native-navigation各有千秋，看自己选择</li>
+<li>蓝牙<br>react-native-ble-plx<br>react-native-ble-manager<br>react-native-bluetooth-serial<br>都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios</li>
+<li>录音<br>react-native-audio</li>
+<li>播放音频<br>react-native-sound</li>
+<li>播放视频<br>react-native-video</li>
+<li>相机<br>react-native-camera</li>
+<li>截图<br>react-native-view-shot</li>
+<li>文字渐变<br>react-native-text-gradient</li>
+<li>背景渐变<br>react-native-linear-gradient</li>
+<li>边框阴影<br>安卓可以用属性elevation，或者react-native-cardview，但是这两个都有个很坑的属性，就是用了阴影以后，上面的遮罩没效果了</li>
+<li>本地文件访问<br>react-native-fs</li>
+<li>图表<br>victory-native： 文档非常全，可配置的属性很多很全，比如折线图的点是否突出显示、折线图的一段标红，比较推荐使用<br>react-native-echarts：好久之前更新的，安装的时候一直报错，就没用了<br>react-native-chart-kit： 图表不全，而且折线图上面的点我没找着怎么去掉，不符合我们的需求，去掉<br>react-native-svg-charts： 蛮好看的，也蛮好用的，可以看看<br>react-native-charts-wrapper： 忘了为啥没用它</li>
+<li>UI组件<br>NativeBase</li>
+<li>svg<br>react-native-svg：注意事项：svg要进行transform变换，需要在进行变换的元素上面套一层<g></g></li>
+</ol>
+
     </div>
 
     
@@ -267,15 +274,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/08/20/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/05/24/记一下建立个人博客/" rel="prev" title="记一下建立个人博客">
-                  记一下建立个人博客 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -324,8 +331,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取本地ip地址"><span class="nav-number">1.</span> <span class="nav-text">1. 获取本地ip地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改config文件"><span class="nav-number">2.</span> <span class="nav-text">2. 修改config文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-输出地址"><span class="nav-number">3.</span> <span class="nav-text">3. 输出地址</span></a></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
