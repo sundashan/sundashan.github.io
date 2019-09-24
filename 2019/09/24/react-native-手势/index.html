@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="1. 获取本地ip地址12345678910111213141516171819let os = require(&amp;apos;os&amp;apos;)const ifaces = os.networkInterfaces()console.log(ifaces)Object.keys(ifaces).forEach((ifname) =&amp;gt; &amp;#123;    // var alias = 0">
+  <meta name="description" content="PanResponder  目前我用的是官网的，刚开始用，还不知道有没有什么坑，后面再补 =&amp;gt;PanResponder  react-native-gesture-handler  =&amp;gt;react-native-gesture-handler">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一行命令自动更换ip并输出">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/一行命令自动更换ip并输出/index.html">
+<meta property="og:title" content="react-native 手势">
+<meta property="og:url" content="http://yoursite.com/2019/09/24/react-native-手势/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="1. 获取本地ip地址12345678910111213141516171819let os = require(&amp;apos;os&amp;apos;)const ifaces = os.networkInterfaces()console.log(ifaces)Object.keys(ifaces).forEach((ifname) =&amp;gt; &amp;#123;    // var alias = 0">
+<meta property="og:description" content="PanResponder  目前我用的是官网的，刚开始用，还不知道有没有什么坑，后面再补 =&amp;gt;PanResponder  react-native-gesture-handler  =&amp;gt;react-native-gesture-handler">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-20T08:55:02.258Z">
+<meta property="og:updated_time" content="2019-09-24T09:04:16.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一行命令自动更换ip并输出">
-<meta name="twitter:description" content="1. 获取本地ip地址12345678910111213141516171819let os = require(&amp;apos;os&amp;apos;)const ifaces = os.networkInterfaces()console.log(ifaces)Object.keys(ifaces).forEach((ifname) =&amp;gt; &amp;#123;    // var alias = 0">
-  <link rel="canonical" href="http://yoursite.com/2019/05/23/一行命令自动更换ip并输出/">
+<meta name="twitter:title" content="react-native 手势">
+<meta name="twitter:description" content="PanResponder  目前我用的是官网的，刚开始用，还不知道有没有什么坑，后面再补 =&amp;gt;PanResponder  react-native-gesture-handler  =&amp;gt;react-native-gesture-handler">
+  <link rel="canonical" href="http://yoursite.com/2019/09/24/react-native-手势/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>一行命令自动更换ip并输出 | Blog</title>
+  <title>react-native 手势 | Blog</title>
   
 
 
@@ -195,7 +195,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/一行命令自动更换ip并输出/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/24/react-native-手势/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大山">
@@ -207,7 +207,7 @@
       <meta itemprop="name" content="Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">一行命令自动更换ip并输出
+        <h1 class="post-title" itemprop="name headline">react-native 手势
 
           
         </h1>
@@ -223,19 +223,11 @@
                 
               
 
-              <time title="Erstellt: 2019-05-23 22:46:07" itemprop="dateCreated datePublished" datetime="2019-05-23T22:46:07+08:00">2019-05-23</time>
+              <time title="Erstellt: 2019-09-24 17:01:04 / Geändert am: 17:04:16" itemprop="dateCreated datePublished" datetime="2019-09-24T17:01:04+08:00">2019-09-24</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2019-08-20 16:55:02" itemprop="dateModified" datetime="2019-08-20T16:55:02+08:00">2019-08-20</time>
-              </span>
             
           
 
@@ -250,8 +242,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-获取本地ip地址"><a href="#1-获取本地ip地址" class="headerlink" title="1. 获取本地ip地址"></a>1. 获取本地ip地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">let os = require(&apos;os&apos;)</span><br><span class="line">const ifaces = os.networkInterfaces()</span><br><span class="line">console.log(ifaces)</span><br><span class="line"></span><br><span class="line">Object.keys(ifaces).forEach((ifname) =&gt; &#123;</span><br><span class="line">    // var alias = 0</span><br><span class="line">    ifaces[ifname].forEach(iface =&gt; &#123;</span><br><span class="line">        if (&apos;IPv4&apos; !== iface.family || iface.internal !== false) &#123;</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(ifname, iface.address)</span><br><span class="line">        // if (alias &gt;= 1) &#123;</span><br><span class="line">        //     console.log(ifname + &apos;:&apos; + alias, iface.address)</span><br><span class="line">        // &#125; else &#123;</span><br><span class="line">        //     console.log(ifname, iface.address)</span><br><span class="line">        // &#125;</span><br><span class="line">        // ++alias</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="2-修改config文件"><a href="#2-修改config文件" class="headerlink" title="2. 修改config文件"></a>2. 修改config文件</h3><h3 id="3-输出地址"><a href="#3-输出地址" class="headerlink" title="3. 输出地址"></a>3. 输出地址</h3>
+        <ol>
+<li>PanResponder</li>
+</ol>
+<blockquote><p>目前我用的是官网的，刚开始用，还不知道有没有什么坑，后面再补</p>
+<footer><strong>=></strong><cite><a href="https://facebook.github.io/react-native/docs/panresponder" target="_blank" rel="noopener">PanResponder</a></cite></footer></blockquote>
+<ol start="2">
+<li>react-native-gesture-handler</li>
+</ol>
+<blockquote><footer><strong>=></strong><cite><a href="https://github.com/kmagiera/react-native-gesture-handler" target="_blank" rel="noopener">react-native-gesture-handler</a></cite></footer></blockquote>
     </div>
 
     
@@ -267,15 +266,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/09/18/react-native-android-后台运行/" rel="next" title="react-native android 后台运行">
+                  <i class="fa fa-chevron-left"></i> react-native android 后台运行
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/05/24/记一下建立个人博客/" rel="prev" title="记一下建立个人博客">
-                  记一下建立个人博客 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -324,8 +323,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取本地ip地址"><span class="nav-number">1.</span> <span class="nav-text">1. 获取本地ip地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改config文件"><span class="nav-number">2.</span> <span class="nav-text">2. 修改config文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-输出地址"><span class="nav-number">3.</span> <span class="nav-text">3. 输出地址</span></a></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
