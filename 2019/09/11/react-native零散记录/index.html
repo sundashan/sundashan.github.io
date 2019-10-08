@@ -13,7 +13,7 @@
 <meta property="og:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/cover3.png">
-<meta property="og:updated_time" content="2019-09-25T09:39:57.635Z">
+<meta property="og:updated_time" content="2019-10-08T07:27:02.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native零散记录">
 <meta name="twitter:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
@@ -98,7 +98,14 @@
 <li>截图<br>react-native-view-shot</li>
 <li>文字渐变<br>react-native-text-gradient</li>
 <li>背景渐变<br>react-native-linear-gradient</li>
-<li>边框阴影<br>安卓可以用属性elevation，或者react-native-cardview，但是这两个都有个很坑的属性，就是用了阴影以后，上面的遮罩没效果了</li>
+<li><p>边框阴影<br>安卓可以用属性elevation，或者react-native-cardview<br>说到这两个属性就要说到层级关系，比如，给边框加了阴影以后，再想在上面通过position: ‘absolute’加一层遮罩，这个时候就发现遮罩无效<br>注意：</p>
+<ol>
+<li>如果只有zIndex没有elevation,那么zIndex大的在上层</li>
+<li>如果两个组件都有elevation，那么elevation大的在上层</li>
+<li>如果既有zIndex也有elevation，那么以elevation为准</li>
+</ol>
+<p>所以上面说的遮罩无效的问题，解决方法是在遮罩上也加上elevation</p>
+</li>
 <li>本地文件访问<br>react-native-fs</li>
 <li>图表<br>victory-native： 文档非常全，可配置的属性很多很全，比如折线图的点是否突出显示、折线图的一段标红，比较推荐使用<br>react-native-echarts：好久之前更新的，安装的时候一直报错，就没用了<br>react-native-chart-kit： 图表不全，而且折线图上面的点我没找着怎么去掉，不符合我们的需求，去掉<br>react-native-svg-charts： 蛮好看的，也蛮好用的，可以看看<br>react-native-charts-wrapper： 忘了为啥没用它</li>
 <li>UI组件<br>NativeBase</li>
