@@ -306,7 +306,6 @@ body {
       font-size: 13px; }
     .article > .content table {
       margin: 20px 0;
-      width: 100%;
       border-collapse: collapse;
       border-spacing: 0;
       border: 1px solid #ddd;
@@ -323,7 +322,8 @@ body {
         font-weight: normal; }
       .article > .content table th, .article > .content table td {
         border-bottom: 3px solid #ddd;
-        border-right: 1px solid #eee; }
+        border-right: 1px solid #eee;
+        text-align: left; }
       .article > .content table th {
         padding-bottom: 10px;
         font-weight: 700; }
