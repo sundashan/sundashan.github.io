@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>react-native零散记录 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-native零散记录">
+<meta property="og:url" content="http://yoursite.com/2019/09/11/react-native零散记录/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-08-12T12:28:32.791Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react-native零散记录">
+<meta name="twitter:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
+  
+    <link rel="icon" href="/images/pig.png">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">大山</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">react-native零散记录</h2>
+  <p class="sub">Sep 11, 2019</p>
+  <article class="content">
+    <ol>
+<li>导航栏<br>react-navigation、react-native-navigation各有千秋，看自己选择</li>
+<li>蓝牙<br>react-native-ble-plx<br>react-native-ble-manager<br>react-native-bluetooth-serial<br>都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios</li>
+<li>录音<br>react-native-audio</li>
+<li>播放音频<br>react-native-sound</li>
+<li>播放视频<br>react-native-video</li>
+<li>相机<br>react-native-camera</li>
+<li>截图<br>react-native-view-shot</li>
+<li>文字渐变<br>react-native-text-gradient 或者自己用svg的渐变写下，也很简单，[ 例子见最下方 ]</li>
+<li>背景渐变<br>react-native-linear-gradient</li>
+<li><p>边框阴影<br>安卓可以用属性elevation，或者react-native-cardview<br>说到这两个属性就要说到层级关系，比如，给边框加了阴影以后，再想在上面通过position: ‘absolute’加一层遮罩，这个时候就发现遮罩无效<br>注意：</p>
+<ol>
+<li>如果只有zIndex没有elevation,那么zIndex大的在上层</li>
+<li>如果两个组件都有elevation，那么elevation大的在上层</li>
+<li>如果既有zIndex也有elevation，那么以elevation为准</li>
+</ol>
+<p>所以上面说的遮罩无效的问题，解决方法是在遮罩上也加上elevation</p>
+</li>
+<li>本地文件访问<br>react-native-fs</li>
+<li>图表<br>victory-native： 文档非常全，可配置的属性很多很全，比如折线图的点是否突出显示、折线图的一段标红，比较推荐使用<br>react-native-echarts：好久之前更新的，安装的时候一直报错，就没用了<br>react-native-chart-kit： 图表不全，而且折线图上面的点我没找着怎么去掉，不符合我们的需求，去掉<br>react-native-svg-charts： 蛮好看的，也蛮好用的，可以看看<br>react-native-charts-wrapper： 忘了为啥没用它</li>
+<li>UI组件<br>NativeBase</li>
+<li>svg<br>react-native-svg：注意事项：svg要进行transform变换，需要在进行变换的元素上面套一层G</li>
+<li>图片相关<ol>
+<li>图片上传 react-native-image-picker</li>
+<li>图片预览 react-native-image-zoom-viewer</li>
+</ol>
+</li>
+</ol>
+<p>文字渐变例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Svg, Rect, Defs, LinearGradient, Use, Stop, Text &#125; from &apos;react-native-svg&apos;</span><br><span class="line">&lt;Svg width=&quot;100&quot; height=&quot;21&quot; viewBox=&quot;0 0 100 21&quot;&gt;</span><br><span class="line">    &lt;Defs&gt;</span><br><span class="line">        &lt;LinearGradient</span><br><span class="line">            id=&quot;Gradient&quot;</span><br><span class="line">            gradientUnits=&quot;userSpaceOnUse&quot;</span><br><span class="line">            x1=&quot;0&quot;</span><br><span class="line">            y1=&quot;0&quot;</span><br><span class="line">            x2=&quot;100&quot;</span><br><span class="line">            y2=&quot;0&quot;</span><br><span class="line">        &gt;</span><br><span class="line">            &lt;Stop offset=&quot;0&quot; stopColor=&#123;this.props.startColor&#125; stopOpacity=&quot;1&quot; /&gt;</span><br><span class="line">            &lt;Stop offset=&quot;1&quot; stopColor=&#123;this.props.endColor&#125; stopOpacity=&quot;1&quot; /&gt;</span><br><span class="line">        &lt;/LinearGradient&gt;</span><br><span class="line">        &lt;Text</span><br><span class="line">            id=&quot;Text&quot;</span><br><span class="line">            x=&quot;50&quot;</span><br><span class="line">            y=&quot;15&quot;</span><br><span class="line">            fontFamily=&quot;Verdana&quot;</span><br><span class="line">            fontSize=&quot;18&quot;</span><br><span class="line">            textAnchor=&quot;middle&quot;</span><br><span class="line">            &gt;</span><br><span class="line">        &#123;this.props.value&#125;</span><br><span class="line">        &lt;/Text&gt;</span><br><span class="line">    &lt;/Defs&gt;</span><br><span class="line">    &lt;Rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;21&quot; fill=&quot;#FFF&quot; /&gt;</span><br><span class="line">    &lt;Use href=&quot;#Text&quot; fill=&quot;url(#Gradient)&quot; /&gt;</span><br><span class="line">&lt;/Svg&gt;</span><br></pre></td></tr></table></figure></p>
+
+  </article>
+  <footer class="f-cf">
+    
+      <a href="/2019/09/18/react-native-android-后台运行/" class="link f-fl">⟵react-native android 后台运行</a>
+    
+    
+      <a href="/2019/05/24/记一下建立个人博客/" class="link f-fr">记一下建立个人博客⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  
+  
+  <span class="copyright">到底啦</span>
+</footer>
+  </div>
+</body>
+</html>
