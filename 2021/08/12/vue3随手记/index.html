@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>vue3随手记 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="nextTick改成： import { nextTick } from ‘vue’nextTick(() =&amp;gt; {    …}) data created  =&amp;gt;  setup onMounted示例： this.$router  useRouter()this.$route   useRoute() 记得return里面导出 return {    …toRefs(state)}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue3随手记">
+<meta property="og:url" content="http://yoursite.com/2021/08/12/vue3随手记/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="nextTick改成： import { nextTick } from ‘vue’nextTick(() =&amp;gt; {    …}) data created  =&amp;gt;  setup onMounted示例： this.$router  useRouter()this.$route   useRoute() 记得return里面导出 return {    …toRefs(state)}">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-08-12T14:26:36.522Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue3随手记">
+<meta name="twitter:description" content="nextTick改成： import { nextTick } from ‘vue’nextTick(() =&amp;gt; {    …}) data created  =&amp;gt;  setup onMounted示例： this.$router  useRouter()this.$route   useRoute() 记得return里面导出 return {    …toRefs(state)}">
+  
+    <link rel="icon" href="/images/pig.png">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">大山</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">vue3随手记</h2>
+  <p class="sub">Aug 12, 2021</p>
+  <article class="content">
+    <p>nextTick改成：</p>
+<p>import { nextTick } from ‘vue’<br>nextTick(() =&gt; {<br>    …<br>})</p>
+<p>data created  =&gt;  setup</p>
+<p>onMounted<br>示例：</p>
+<p>this.$router  useRouter()<br>this.$route   useRoute()</p>
+<p>记得return里面导出</p>
+<p>return {<br>    …toRefs(state)<br>}</p>
+<p>ref this.$refs 改成<br>const divref = ref(null)<br>console.log(divref.value)</p>
+<p>watch(() =&gt; return state.count, (count, preCount) =&gt; {</p>
+<p>})</p>
+<p>vue-router 创建 滑动 mode base都有改变<br>import { createRouter, createWebHistory } from ‘vue-router’<br>const router = VueRouter.createRouter({<br>  history: VueRouter.createWebHashHistory(), // mode改成history<br>  <!-- history: VueRouter.createWebHistory('/base-directory/'), // base被删除，作为createWebHistory的参数传递 --><br>  routes,<br>  scrollBehavior (to, from, savedPosition) {<br>    // return 期望滚动到哪个的位置<br>    x,y改成left,top<br>  }<br>})</p>
+<p>i18<br>安装后创建一个i18.js文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createI18n &#125; from &apos;vue-i18n&apos; //引入vue-i18n组件</span><br><span class="line">import messages from &apos;./index&apos;</span><br><span class="line">const language = (</span><br><span class="line">  (navigator.language ? navigator.language : navigator.userLanguage) || &quot;zh&quot;</span><br><span class="line">).toLowerCase();</span><br><span class="line">const i18n = createI18n(&#123;</span><br><span class="line">  fallbackLocale: &apos;ch&apos;,</span><br><span class="line">  globalInjection:true, // 重点</span><br><span class="line">  legacy: false, // you must specify &apos;legacy: false&apos; option</span><br><span class="line">  locale: language.split(&quot;-&quot;)[0] || &quot;zh&quot;,</span><br><span class="line">  messages,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">export default i18n</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; getCurrentInstance &#125; from &quot;vue&quot;;</span><br><span class="line">import &#123; useI18n &#125; from &apos;vue-i18n&apos;//要在js中使用国际化</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;App&quot;,</span><br><span class="line">  setup() &#123;</span><br><span class="line">    const &#123; proxy &#125; = getCurrentInstance();</span><br><span class="line">    function change(type) &#123;</span><br><span class="line">      proxy.$i18n.locale = type;</span><br><span class="line">    &#125;</span><br><span class="line">　　　　const &#123; t &#125; = useI18n()</span><br><span class="line">　　　　console.log(t(&apos;message.pagesDes&apos;))</span><br><span class="line">return &#123; change &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+  </article>
+  <footer class="f-cf">
+    
+    
+      <a href="/2021/08/12/webpack一点小记录/" class="link f-fr">webpack一点小记录⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  
+  
+  <span class="copyright">到底啦</span>
+</footer>
+  </div>
+</body>
+</html>

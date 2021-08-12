@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>webpack一点小记录 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="webpack.config.js1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889const path = r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack一点小记录">
+<meta property="og:url" content="http://yoursite.com/2021/08/12/webpack一点小记录/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="webpack.config.js1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889const path = r">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-08-12T14:28:30.246Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack一点小记录">
+<meta name="twitter:description" content="webpack.config.js1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889const path = r">
+  
+    <link rel="icon" href="/images/pig.png">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">大山</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">webpack一点小记录</h2>
+  <p class="sub">Aug 12, 2021</p>
+  <article class="content">
+    <p>webpack.config.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;)</span><br><span class="line">const webpack = require(&apos;webpack&apos;)</span><br><span class="line">const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;)</span><br><span class="line">const &#123; VueLoaderPlugin &#125; = require(&apos;vue-loader&apos;)</span><br><span class="line">const MiniCssExtractPlugin = require(&apos;mini-css-extract-plugin&apos;) // 支持在开发中加载热更新的css文件</span><br><span class="line">const BundleAnalyzerPlugin = require(&apos;webpack-bundle-analyzer&apos;).BundleAnalyzerPlugin</span><br><span class="line">const CompressionPlugin = require(&quot;compression-webpack-plugin&quot;)</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        path: path.resolve(__dirname, &apos;../src/main.js&apos;)</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.resolve(__dirname, &apos;dist&apos;),</span><br><span class="line">        filename: &apos;js/[name].[hash:8].js&apos;,</span><br><span class="line">        chunkFilename: &apos;js/[id].[chunkhash].js&apos;, // js放到js文件夹下面</span><br><span class="line">        clean: true,  // 每次构建之前清理文件夹</span><br><span class="line">        assetModuleFilename: &apos;images/[hash:8][ext][query]&apos;  // 图片类都放到images文件夹下面</span><br><span class="line">    &#125;,</span><br><span class="line">    mode: &apos;development&apos;,</span><br><span class="line">    resolve: &#123; // 配置如何解析模块 Configure how modules are resolved</span><br><span class="line">        alias: &#123; // 更轻松地为import或require某些模块创建别名</span><br><span class="line">            // &apos;vue$&apos;: &apos;vue/dist/vue.runtime.esm.js&apos;,</span><br><span class="line">            &apos;@&apos;: path.resolve(__dirname, &apos;../src&apos;)</span><br><span class="line">        &#125;,</span><br><span class="line">        extensions: [&apos;*&apos;, &apos;.js&apos;, &apos;.json&apos;, &apos;.vue&apos;]  // 尝试按顺序解析这些扩展。如果多个文件共享相同的名称但具有不同的扩展名，webpack 将使用数组中第一个列出的扩展名解析文件并跳过其余文件。</span><br><span class="line">    &#125;,</span><br><span class="line">    module: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">                test: /\.vue$/,</span><br><span class="line">                loader: &apos;vue-loader&apos;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                test: /\.js$/,</span><br><span class="line">                exclude: /node_modules/,</span><br><span class="line">                use: &#123;</span><br><span class="line">                    loader: &apos;babel-loader&apos;,</span><br><span class="line">                    options: &#123;</span><br><span class="line">                        presets: [&apos;@babel/preset-env&apos;]</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                test: /\.css$/,</span><br><span class="line">                use: [&apos;style-loader&apos;, &apos;css-loader&apos;]</span><br><span class="line">                // test: /.s?css$/,</span><br><span class="line">                // use: [MiniCssExtractPlugin.loader, &quot;css-loader&quot;, &quot;sass-loader&quot;]</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                test: /\.scss$/,</span><br><span class="line">                use: [</span><br><span class="line">                    &apos;style-loader&apos;, &#123;</span><br><span class="line">                        loader: MiniCssExtractPlugin.loader,</span><br><span class="line">                        options: &#123;</span><br><span class="line">                            esModule: false,</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;, &apos;css-loader&apos;, &apos;sass-loader&apos;</span><br><span class="line">                ]</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,</span><br><span class="line">                type: &apos;asset/resource&apos;</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                test: /\.svg$/,</span><br><span class="line">                type: &apos;asset/inline&apos;</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                test: /\.txt$/,</span><br><span class="line">                type: &apos;asset/source&apos;</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,</span><br><span class="line">                type: &apos;asset/resource&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new HtmlWebpackPlugin(&#123;  // 这是一个webpack插件，它简化了 HTML 文件的创建以服务于你的webpack包。这对于webpack在文件名中包含哈希值的包尤其有用，该哈希值会更改每次编译。您可以让插件为您生成 HTML 文件，使用lodash模板提供您自己的模板或使用您自己的加载程序。</span><br><span class="line">            template: path.resolve(__dirname, &apos;../public/index.html&apos;)</span><br><span class="line">        &#125;),</span><br><span class="line">        new VueLoaderPlugin(), // 热更新</span><br><span class="line">        new MiniCssExtractPlugin(&#123; //这个插件将 CSS 提取到单独的文件中。它为每个包含 CSS 的 JS 文件创建一个 CSS 文件。它支持按需加载 CSS 和 SourceMaps。</span><br><span class="line">            filename: &quot;css/[name].css&quot;,</span><br><span class="line">            chunkFilename: &quot;css/[id].css&quot;,</span><br><span class="line">          &#125;),</span><br><span class="line">        new BundleAnalyzerPlugin(),  // 分析</span><br><span class="line">        new CompressionPlugin(), // 压缩。准备资产的压缩版本以使用内容编码为它们提供服务。</span><br><span class="line">        new webpack.DllReferencePlugin(&#123;</span><br><span class="line">            context: __dirname,</span><br><span class="line">            // manifest: require(&apos;./wendor-manifest.json&apos;)</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>webpack.prod.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">const CopyWebpackPlugin = require(&apos;copy-webpack-plugin&apos;)</span><br><span class="line">const path = require(&apos;path&apos;)</span><br><span class="line">const TerserPlugin = require(&apos;terser-webpack-plugin&apos;)</span><br><span class="line">const CssMinimizerPlugin = require(&apos;css-minimizer-webpack-plugin&apos;) // css压缩</span><br><span class="line">const &#123; merge &#125; = require(&apos;webpack-merge&apos;)</span><br><span class="line">const common = require(&apos;./webpack.config.js&apos;)</span><br><span class="line"></span><br><span class="line">module.exports = merge(common, &#123;</span><br><span class="line">    mode: &apos;production&apos;,</span><br><span class="line">    devtool: &apos;cheap-module-source-map&apos;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new CopyWebpackPlugin(&#123;</span><br><span class="line">            patterns: [&#123;</span><br><span class="line">                from: path.resolve(__dirname, &apos;../public&apos;),</span><br><span class="line">                to: path.resolve(__dirname, &apos;public&apos;)</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    optimization: &#123; //  优化</span><br><span class="line">        minimizer: [</span><br><span class="line">            new TerserPlugin(),</span><br><span class="line">            new CssMinimizerPlugin()</span><br><span class="line">        ],</span><br><span class="line">        splitChunks: &#123;</span><br><span class="line">            chunks: &apos;all&apos;,</span><br><span class="line">            // cacheGroups: &#123;</span><br><span class="line">            //     libs: &#123;</span><br><span class="line">            //         name: &apos;chunk-libs&apos;,</span><br><span class="line">            //         test: /[\\/]node_modules[\\/]/,</span><br><span class="line">            //         priority: 10,</span><br><span class="line">            //         chunks: &apos;initial&apos;</span><br><span class="line">            //     &#125;</span><br><span class="line">            // &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+
+  </article>
+  <footer class="f-cf">
+    
+      <a href="/2021/08/12/vue3随手记/" class="link f-fl">⟵vue3随手记</a>
+    
+    
+      <a href="/2019/09/24/react-native-手势/" class="link f-fr">react-native 手势⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  
+  
+  <span class="copyright">到底啦</span>
+</footer>
+  </div>
+</body>
+</html>
