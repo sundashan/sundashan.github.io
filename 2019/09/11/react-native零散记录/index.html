@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>react-native零散记录 | Blog</title>
+  <title>react-native零散记录 | 大山的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
+  <meta name="description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-native零散记录">
 <meta property="og:url" content="http://yoursite.com/2019/09/11/react-native零散记录/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
+<meta property="og:site_name" content="大山的Blog">
+<meta property="og:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-08-12T12:28:32.791Z">
+<meta property="og:updated_time" content="2021-08-16T14:49:36.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native零散记录">
-<meta name="twitter:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙react-native-ble-plxreact-native-ble-managerreact-native-bluetooth-serial都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios 录音react-native-audio 播">
-  
-    <link rel="icon" href="/images/pig.png">
+<meta name="twitter:description" content="导航栏react-navigation、react-native-navigation各有千秋，看自己选择 蓝牙">
   
   <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
   <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
@@ -63,9 +61,7 @@
   <h2 class="title">react-native零散记录</h2>
   <p class="sub">Sep 11, 2019</p>
   <article class="content">
-    <ol>
-<li>导航栏<br>react-navigation、react-native-navigation各有千秋，看自己选择</li>
-<li>蓝牙<br>react-native-ble-plx<br>react-native-ble-manager<br>react-native-bluetooth-serial<br>都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios</li>
+    react-native-ble-plx<br>react-native-ble-manager<br>react-native-bluetooth-serial<br>都可以看下，我用的是react-native-ble-plx，文档比较全面，同时适配安卓ios</li>
 <li>录音<br>react-native-audio</li>
 <li>播放音频<br>react-native-sound</li>
 <li>播放视频<br>react-native-video</li>
@@ -92,7 +88,6 @@
 </li>
 </ol>
 <p>文字渐变例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Svg, Rect, Defs, LinearGradient, Use, Stop, Text &#125; from &apos;react-native-svg&apos;</span><br><span class="line">&lt;Svg width=&quot;100&quot; height=&quot;21&quot; viewBox=&quot;0 0 100 21&quot;&gt;</span><br><span class="line">    &lt;Defs&gt;</span><br><span class="line">        &lt;LinearGradient</span><br><span class="line">            id=&quot;Gradient&quot;</span><br><span class="line">            gradientUnits=&quot;userSpaceOnUse&quot;</span><br><span class="line">            x1=&quot;0&quot;</span><br><span class="line">            y1=&quot;0&quot;</span><br><span class="line">            x2=&quot;100&quot;</span><br><span class="line">            y2=&quot;0&quot;</span><br><span class="line">        &gt;</span><br><span class="line">            &lt;Stop offset=&quot;0&quot; stopColor=&#123;this.props.startColor&#125; stopOpacity=&quot;1&quot; /&gt;</span><br><span class="line">            &lt;Stop offset=&quot;1&quot; stopColor=&#123;this.props.endColor&#125; stopOpacity=&quot;1&quot; /&gt;</span><br><span class="line">        &lt;/LinearGradient&gt;</span><br><span class="line">        &lt;Text</span><br><span class="line">            id=&quot;Text&quot;</span><br><span class="line">            x=&quot;50&quot;</span><br><span class="line">            y=&quot;15&quot;</span><br><span class="line">            fontFamily=&quot;Verdana&quot;</span><br><span class="line">            fontSize=&quot;18&quot;</span><br><span class="line">            textAnchor=&quot;middle&quot;</span><br><span class="line">            &gt;</span><br><span class="line">        &#123;this.props.value&#125;</span><br><span class="line">        &lt;/Text&gt;</span><br><span class="line">    &lt;/Defs&gt;</span><br><span class="line">    &lt;Rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;21&quot; fill=&quot;#FFF&quot; /&gt;</span><br><span class="line">    &lt;Use href=&quot;#Text&quot; fill=&quot;url(#Gradient)&quot; /&gt;</span><br><span class="line">&lt;/Svg&gt;</span><br></pre></td></tr></table></figure></p>
-
   </article>
   <footer class="f-cf">
     
