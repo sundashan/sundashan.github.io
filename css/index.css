@@ -157,7 +157,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 100px;
+  padding: 60px 100px;
   margin: 40px 0;
   background-color: white;
   color: #333; }
@@ -177,7 +177,7 @@ body {
       line-height: 40px; }
       .project-card > .ctnWrap > .title:hover {
         opacity: 1;
-        color: #f0534e; }
+        color: #ea67bf; }
     .project-card > .ctnWrap > .desc {
       font-size: 16px;
       line-height: 30px;
@@ -249,19 +249,19 @@ body {
       font-size: 16px;
       line-height: 30px;
       margin-bottom: 15px; }
-    .article > .content pre, .article > .content .highlight {
+    .article > .content .pre {
+      display: none; }
+    .article > .content .highlight {
       overflow: auto;
       padding: 0;
       color: #333;
       font-size: 13px;
       background: #f8f8f8; }
-      .article > .content pre .gutter, .article > .content .highlight .gutter {
-        text-align: right; }
-        .article > .content pre .gutter pre, .article > .content .highlight .gutter pre {
-          background-color: #f0f0f0;
-          padding: 0 10px; }
-      .article > .content pre .code, .article > .content .highlight .code {
-        padding: 0 10px; }
+      .article > .content .highlight .gutter {
+        display: none; }
+      .article > .content .highlight .code {
+        padding: 0 10px;
+        text-align: left; }
     .article > .content .highlight {
       margin-bottom: 15px; }
     .article > .content ul, .article > .content ol {
@@ -281,7 +281,7 @@ body {
           border-radius: 100%;
           background-color: #444; }
     .article > .content a {
-      color: #f0534e; }
+      color: #ea67bf; }
     .article > .content strong {
       font-weight: 600; }
     .article > .content figure > img {
@@ -305,12 +305,8 @@ body {
       border-radius: 3px;
       font-size: 13px; }
     .article > .content table {
-      margin: 20px 0;
+      margin: 5px;
       width: 100%;
-      border-collapse: collapse;
-      border-spacing: 0;
-      border: 1px solid #ddd;
-      table-layout: fixed;
       word-wrap: break-all; }
       .article > .content table > tbody > tr:nth-of-type(odd) {
         background-color: #f9f9f9; }
@@ -321,9 +317,6 @@ body {
         text-align: center;
         vertical-align: middle;
         font-weight: normal; }
-      .article > .content table th, .article > .content table td {
-        border-bottom: 3px solid #ddd;
-        border-right: 1px solid #eee; }
       .article > .content table th {
         padding-bottom: 10px;
         font-weight: 700; }
@@ -368,7 +361,7 @@ body {
     line-height: 24px; }
     .archive-category > .menu > li > a:hover {
       opacity: 1;
-      color: #f0534e; }
+      color: #ea67bf; }
     .archive-category > .menu > li > span {
       opacity: .45;
       font-size: 14px;
