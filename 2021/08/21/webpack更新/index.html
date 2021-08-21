@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>webpack更新 | 大山的Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="写得比较乱，纯属记载，没有顺序。初始版本：是以前公司的webpack3，一直没有更新，这次看这个项目比较简单就拿这个试试了。使用webpack5以后加了cacheDirectory: true后加入compress-webpack-plugin后，第一次打包和第二次打包加入css-minimizer-webpack-plugin后加入terser-webpack-plugin后使用splitChu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack更新">
+<meta property="og:url" content="http://yoursite.com/2021/08/21/webpack更新/index.html">
+<meta property="og:site_name" content="大山的Blog">
+<meta property="og:description" content="写得比较乱，纯属记载，没有顺序。初始版本：是以前公司的webpack3，一直没有更新，这次看这个项目比较简单就拿这个试试了。使用webpack5以后加了cacheDirectory: true后加入compress-webpack-plugin后，第一次打包和第二次打包加入css-minimizer-webpack-plugin后加入terser-webpack-plugin后使用splitChu">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/1.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/2.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/3.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/4.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/5.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/6.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/7.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/8.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/9.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/10.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/11.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/12.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/13.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/14.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/15.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/16.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/17.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/18.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/19.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/20.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/21.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/22.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/23.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/24.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/25.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/26.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/27.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/28.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/29.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/30.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/31.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/32.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/33.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/34.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/35.png">
+<meta property="og:image" content="http://yoursite.com/images/webpackUpdate/36.png">
+<meta property="og:updated_time" content="2021-08-21T12:20:21.500Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack更新">
+<meta name="twitter:description" content="写得比较乱，纯属记载，没有顺序。初始版本：是以前公司的webpack3，一直没有更新，这次看这个项目比较简单就拿这个试试了。使用webpack5以后加了cacheDirectory: true后加入compress-webpack-plugin后，第一次打包和第二次打包加入css-minimizer-webpack-plugin后加入terser-webpack-plugin后使用splitChu">
+<meta name="twitter:image" content="http://yoursite.com/images/webpackUpdate/1.png">
+  
+    <link rel="icon" href="/images/pig.png">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">大山</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">webpack更新</h2>
+  <p class="sub">Aug 21, 2021</p>
+  <article class="content">
+    <p>写得比较乱，纯属记载，没有顺序。<br>初始版本：是以前公司的webpack3，一直没有更新，这次看这个项目比较简单就拿这个试试了。<br><img src="/images/webpackUpdate/1.png" alt><br>使用webpack5以后<br><img src="/images/webpackUpdate/2.png" alt><br>加了cacheDirectory: true后<br><img src="/images/webpackUpdate/3.png" alt><br>加入compress-webpack-plugin后，第一次打包和第二次打包<br><img src="/images/webpackUpdate/4.png" alt><br>加入css-minimizer-webpack-plugin后<br><img src="/images/webpackUpdate/5.png" alt><br>加入terser-webpack-plugin后<br><img src="/images/webpackUpdate/6.png" alt><br>使用splitChunks: {chunks: ‘all’}后<br><img src="/images/webpackUpdate/7.png" alt><br>使用devtool: ‘cheap-module-source-map’,并且修改mode: ‘production’后，之前一直搞错了，没在production下面。。。。不过再让我敲一遍截图一遍也嫌麻烦，有个对比就行<br><img src="/images/webpackUpdate/8.png" alt><br>修改mode: ‘development’,<br><img src="/images/webpackUpdate/9.png" alt><br>修改devtool: ‘eval-source-map’,后<br><img src="/images/webpackUpdate/10.png" alt><br>修改devtool： false后<br><img src="/images/webpackUpdate/11.png" alt><br>修改devtool：inline-source-map后<br><img src="/images/webpackUpdate/12.png" alt><br>devtool: ‘inline-cheap-source-map’,<br><img src="/images/webpackUpdate/13.png" alt><br>devtool： eval<br><img src="/images/webpackUpdate/14.png" alt><br>改成mode：production后<br><img src="/images/webpackUpdate/15.png" alt><br>在TerserPlugin中添加paraller：4 并没有变快<br>new TerserPlugin({parallel: 4}),<br><img src="/images/webpackUpdate/16.png" alt><br>修改paraller为true<br><img src="/images/webpackUpdate/17.png" alt><br>加入terserOptions: {<br>                    compress: {<br>                        unused: true,<br>                        drop_debugger: true,<br>                        drop_console: true,<br>                        dead_code: true<br>                    }<br>                }后，速度变慢了，包有没有变小还没看到<br><img src="/images/webpackUpdate/18.png" alt><br>加入BundleAnalyzerPlugin后，分析页面，然后进行别的方面的性能优化</p>
+<p>添加thread-loader<br><img src="/images/webpackUpdate/19.png" alt><br>使用fast-sass-loader报错了，去除</p>
+<p>加入cache-loader，第一次<br><img src="/images/webpackUpdate/20.png" alt><br><img src="/images/webpackUpdate/21.png" alt><br>第二次，哇，显著优化！！！<br><img src="/images/webpackUpdate/22.png" alt><br>修改了cache-loader和thread-loader的位置，第一次，<br><img src="/images/webpackUpdate/23.png" alt><br>第二次<br><img src="/images/webpackUpdate/24.png" alt><br>更新一个tree-shaking的问题<br><img src="/images/webpackUpdate/25.png" alt><br>第一次，<br><img src="/images/webpackUpdate/26.png" alt><br>第二次<br><img src="/images/webpackUpdate/27.png" alt><br>卧槽卧槽卧槽，加了文件缓存，惊为天人！！！太牛逼了吧！！！<br><img src="/images/webpackUpdate/28.png" alt><br>第一次<br><img src="/images/webpackUpdate/29.png" alt><br>第二次<br><img src="/images/webpackUpdate/30.png" alt><br>splitChunks加入cacheGroups<br><img src="/images/webpackUpdate/31.png" alt><br>第一次<br><img src="/images/webpackUpdate/32.png" alt><br>第二次<br><img src="/images/webpackUpdate/33.png" alt><br>额，加了PurgecssPlugin后，居然变成了53s！！！体积我没看，但是这个时间太不可了<br><img src="/images/webpackUpdate/34.png" alt><br>第一次<br><img src="/images/webpackUpdate/35.png" alt><br>第二次也要49s，可怕<br><img src="/images/webpackUpdate/36.png" alt></p>
+<p>懒得总结了，回头再说，太长了，看得我脑壳疼</p>
+
+  </article>
+  <footer class="f-cf">
+    
+    
+      <a href="/2021/08/16/手写promise/" class="link f-fr">手写promise⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  
+  
+  <span class="copyright">到底啦</span>
+</footer>
+  </div>
+</body>
+</html>
