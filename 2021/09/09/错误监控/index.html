@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>错误监控 | 大山的Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这边用的是sentry，很久之前简单用过，但是复杂的没加进来，最近又拿出来看了看 1.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="错误监控">
+<meta property="og:url" content="http://yoursite.com/2021/09/09/错误监控/index.html">
+<meta property="og:site_name" content="大山的Blog">
+<meta property="og:description" content="这边用的是sentry，很久之前简单用过，但是复杂的没加进来，最近又拿出来看了看 1.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-09-09T16:31:30.239Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="错误监控">
+<meta name="twitter:description" content="这边用的是sentry，很久之前简单用过，但是复杂的没加进来，最近又拿出来看了看 1.">
+  
+    <link rel="icon" href="/images/pig.png">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">大山</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">错误监控</h2>
+  <p class="sub">Sep 9, 2021</p>
+  <article class="content">
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">地址：https://sentry.io</span><br></pre></td></tr></table></figure>
+<ol>
+<li>安装,去官网文档中选择，根据项目类型不同，安装不同，比如vue的如下<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add @sentry/vue @sentry/tracing</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js文件中,vue2和vue3不大一样,具体可以看官网</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> Sentry <span class="keyword">from</span> <span class="string">"@sentry/vue"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Integrations &#125; <span class="keyword">from</span> <span class="string">"@sentry/tracing"</span>;</span><br><span class="line"></span><br><span class="line">Sentry.init(&#123;</span><br><span class="line">  Vue,</span><br><span class="line">  dsn: <span class="string">"https://ba1310a8c52248aba183ade5c8984faa@o218396.ingest.sentry.io/5951817"</span>,</span><br><span class="line">  release:<span class="string">"v1.0.1"</span>,</span><br><span class="line">  integrations: [</span><br><span class="line">    <span class="keyword">new</span> Integrations.BrowserTracing(&#123;</span><br><span class="line">      routingInstrumentation: Sentry.vueRouterInstrumentation(router),</span><br><span class="line">      tracingOrigins: [<span class="string">"localhost"</span>, <span class="string">"my-site-url.com"</span>, /^\<span class="comment">//],</span></span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">  tracesSampleRate: <span class="number">1.0</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>新建.sentryclirc</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[defaults]</span><br><span class="line">url=https:<span class="comment">//sentry.io/</span></span><br><span class="line">org=xxx</span><br><span class="line">project=xxx</span><br><span class="line">[auth]</span><br><span class="line">token=xxx</span><br><span class="line"><span class="comment">// token的获取位置是Settings——&gt;Account——&gt;API——&gt;Auth Tokens</span></span><br><span class="line"><span class="comment">// 默认没有令牌,需要创建,project:write选项一定要勾</span></span><br><span class="line">--log-level=[info|debug]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置sourceMap,没有配置sourceMap的时候,错误定位不能具体到某一行,整体看到的是一个bundle文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">webpack.config.js文件</span><br><span class="line"><span class="keyword">const</span> SentryWebpackPlugin = <span class="built_in">require</span>(<span class="string">"@sentry/webpack-plugin"</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    devtool: <span class="string">'source-map'</span></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> SentryWebpackPlugin(&#123;</span><br><span class="line">            release:<span class="string">"v1.0.1"</span>, <span class="comment">// 这边的版本号对应下面👇创建的</span></span><br><span class="line">            include: <span class="string">"."</span>,</span><br><span class="line">            ignoreFile: <span class="string">".sentrycliignore"</span>,</span><br><span class="line">            ignore: [<span class="string">"node_modules"</span>, <span class="string">"webpack.config.js"</span>],</span><br><span class="line">            configFile: <span class="string">"sentry.properties"</span>,</span><br><span class="line">            urlPrefix:<span class="string">"~/static/js"</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>release可能会报错,需要先<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add @sentry/cli</span><br><span class="line">sentry-cli releases -o &lt;org名字&gt; -p &lt;project名字&gt; <span class="keyword">new</span> v1<span class="number">.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></p>
+<ol start="4">
+<li><p>清除sourceMap</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add @sentry/webpack-plugin</span><br><span class="line"><span class="comment">// 具体使用也是在webpack里面引入</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>错误类型<br>待补充</p>
+</li>
+<li><p>手动上报<br>待补充</p>
+</li>
+</ol>
+  </article>
+  <footer class="f-cf">
+    
+      <a href="/2021/09/10/大文件上传/" class="link f-fl">⟵大文件上传</a>
+    
+    
+      <a href="/2021/08/21/webpack更新/" class="link f-fr">webpack更新⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  
+  
+  <span class="copyright">到底啦</span>
+</footer>
+  </div>
+</body>
+</html>
